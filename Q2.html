@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Q2 of JS assignment
+    </title>
+    <script>
+        function calc() {
+            var n1 = parseFloat(document.getElementById('n1').value);
+            var n2 = parseFloat(document.getElementById('n2').value);
+            var oper = document.getElementById('operator').value;
+
+            if (oper == '+') {
+                document.getElementById('result').value = n1 + n2;
+            }
+            if (oper == '-') {
+                document.getElementById('result').value = n1 - n2;
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <input type="number" id="n1"><br/><br/>
+    <input type="number" id="n2"><br/><br/>
+    <select id="operator">
+        <option value = "+">ADD</option>
+        <option value = "-">SUBTRACT</option>
+    </select><br/><br/>
+    <button onclick="calc();">EQUAL TO</button>
+    <input type="number" id="result"><br/><br/>
+</body>
+
+</html>
