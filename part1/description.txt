@@ -1,4 +1,5 @@
-Part 1 :
+Part 1:
+
 
 1. Download and install Postgres and MySQL packages on your system.
 2. Restore some sample database in MySQL
