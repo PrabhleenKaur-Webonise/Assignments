@@ -18,28 +18,13 @@ SOLUTION:
     • When a philosopher wants to eat the rice, wait for the chopstick at his left and picks up that chopstick. Then waits for the right chopstick to be available, and then picks it too.
     • After eating, puts both the chopsticks down
     • Correctness properties it needs to satisfy are :
-        ◦ MutualExclusionPrinciple– No two Philosophers can have the two forks simultaneously.
-        ◦ FreefromDeadlock–Each philosopher can get the chance to eat in a certain finite time.
+        ◦ Mutual Exclusion Principle– No two Philosophers can have the two forks simultaneously.
+        ◦ Free from Deadlock–Each philosopher can get the chance to eat in a certain finite time.
         ◦ Free from Starvation –When few Philosophers are waiting then one gets a chance to eat in a while.
 
     • No strict Alternation.
     • Proper utilization of time.
     • A solution of the Dining Philosophers Problem is to use a semaphore to represent a chopstick. A chopstick can be picked up by executing a wait operation on the semaphore and released by executing a signal semaphore. 
-semaphore chopstick [5];
     • Initially the elements of the chopstick are initialized to 1 as the chopsticks are on the table and not picked up by a philosopher.
     • The idea is to find a solution so that none of the philosophers would starve, i.e. never have the chance to acquire the forks necessary for him to eat.
-    • The structure of a random philosopher i is given as follows −
-		do {
-			wait( chopstick[i] );
-			wait( chopstick[ (i+1) % 5] );
-			. .
-			EATING THE RICE
-			signal( chopstick[i] );
-			signal( chopstick[ (i+1) % 5] );
-			. .
-			THINKING
-		} while(1);
-    
-In the above structure, first wait operation is performed on chopstick[i] and chopstick[ (i+1) % 5]. This means that the philosopher i has picked up the chopsticks on his sides. Then the eating function is performed.
-After that, signal operation is performed on chopstick[i] and chopstick[ (i+1) % 5]. This means that the philosopher i has eaten and put down the chopsticks on his sides. Then the philosopher goes back to thinking.
 
