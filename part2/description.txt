@@ -1,0 +1,3 @@
+Part 2 :
+
+5. Install & Configure WordPress LEMP stack /or/ Magento /or/ Drupal website with Nginx proxy, on your local system.
